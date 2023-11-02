@@ -9,7 +9,7 @@ It's a simple project that has 'Document' that consists of 'Image', 'Paragraph',
 It's a modificaiton of project 1. DocumentBase that implements Visitor pattern, but without implementing 'Accept(IVistor)' (so that it does not make any modification in any 'DocumentElement'). Instead it uses type casting to invoke Visitor on an object, of particular DocumentElement class. The Visitor is used to export 'DocumentElements' to PDF.
 
 Pros:
-  - We did not touch anything in 'IDocumentElement', 'Image', 'Paragraph' or 'Title' 
+  - We did not touch anything in 'IDocumentElement', 'Image', 'Paragraph' or 'Title' <br/>
 Cons:
   - Each time we add new DocumentElement we need to edit 'Document.ExportAllDocumentElementsToPDF()' method and check another type
   - Using general type (Interface 'IVisitDocumentElement') didn't help cause we had to cast it in 'Document.ExportAllDocumentElementsToPDF()' method anyway
