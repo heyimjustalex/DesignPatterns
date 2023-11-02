@@ -4,21 +4,21 @@ namespace ShoppingCartBase
 {
     public class ShoppingCart
     {
-        List<ProductBase> _products; 
+        List<ProductBase> Products; 
        
         public ShoppingCart() {
-            _products = new List<ProductBase>();    
+            Products = new List<ProductBase>();    
         }   
 
         public void AddProduct(ProductBase product)
         {
-            _products.Add(product); 
+            Products.Add(product); 
         }
 
         public double GetCartValue()
         {
             double value = 0;
-            foreach(ProductBase product in _products) {
+            foreach(ProductBase product in Products) {
 
                 value += product.Price;
             

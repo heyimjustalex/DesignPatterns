@@ -1,14 +1,18 @@
 ﻿
+using ShoppingCartVisitorExample.Visitors;
+
 namespace ShoppingCartVisitorExample.Products
 {
-    public class Drink : ProductBase
+    public class Drink : ProductBase, IAcceptVisitor
     {
         public int VolumeInMilliliters { get; set; }
         public string Flavor { get; set; }
-        public Drink(int code, string name, string description, string category, int volumeInMilliliters, string flavor) : base(code, name, description, category)
+        public double PricePerMililiter { get; set; }
+        public Drink(int code, string name, string description, string category, int volumeInMilliliters, string flavor, double price) : base(code, name, description, category,price)
         {
             VolumeInMilliliters = volumeInMilliliters;
-            Flavor = flavor;    
+            Flavor = flavor;
+
         }
 
         public string GetShortDescription()
@@ -16,5 +20,10 @@ namespace ShoppingCartVisitorExample.Products
             return $"{Name} -> {Flavor} {VolumeInMilliliters}ml";
         }
 
+        public void Accept(IProductVisitor visitor)
+        {
+            visitor.Visit(this);
+
+        }
     }
 }

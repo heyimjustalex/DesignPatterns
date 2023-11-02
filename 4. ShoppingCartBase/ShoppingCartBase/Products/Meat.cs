@@ -4,13 +4,15 @@ namespace ShoppingCartVisitorExample.Products
 {
     public class Meat : ProductBase
     {
-         public bool IsFresh { get; set; }
+        public double PricePerKilogram { get; set; }
+        public bool IsFresh { get; set; }
         public string Type { get; set; }
-        public Meat(int code, string name, string description, string category, double price, bool isFresh, string type)
-            : base(code, name, description, category, price )
-        {   
+        public Meat(int code, string name, string description, string category, bool isFresh, string type, double price)
+            : base(code, name, description, category, price)
+        {
+
             IsFresh = isFresh;
-            Type = type;    
+            Type = type;
         }
 
         public bool IsSuitableForGrilling()
