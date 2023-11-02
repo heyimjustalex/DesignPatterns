@@ -14,10 +14,10 @@ It's a modificaiton of project 1. DocumentBase that implements Visitor pattern, 
 ![385551355_358817173322773_3410959859631446479_n](https://github.com/heyimjustalex/DesignPatterns/assets/21158649/1b63ba3d-60ee-48c4-8a1e-a71ee5044312)
 
 
-Pros:
+**Pros:**
   - We did not touch anything in 'IDocumentElement', 'Image', 'Paragraph' or 'Title'
 
-Cons:
+**Cons:**
   - Each time we add new DocumentElement we need to edit 'Document.ExportAllDocumentElementsToPDF()' method and check another type
   - Using general type (Interface 'IVisitDocumentElement') didn't help cause we had to cast it in 'Document.ExportAllDocumentElementsToPDF()' method anyway
   - We break OCP, because every time we need to add new 'DocumentElement' we need to modify 'Document.ExportAllDocumentElementsToPDF()' method
@@ -29,11 +29,11 @@ It's a modification of project 2. DocumentVisitorWihoutModification that modifie
 ![371470715_811674984043626_1713823486591569104_n](https://github.com/heyimjustalex/DesignPatterns/assets/21158649/daa61eae-fa42-44ae-9ecf-661b7524d208)
 
 
-Pros:
+**Pros:**
   - Each time we add new DocumentElement we need DO NOT NEED to edit 'Document.ExportAllDocumentElementsToPDF()' method and check another type
   - We do not break OCP
 
-Cons:
+**Cons:**
   - We did touch 'IDocumentElement', 'Image', 'Paragraph' and 'Title' classes
 
 ## 4. ShoppingCartBase
@@ -42,10 +42,10 @@ Shopping cart example that uses abstract class for 'Product'. Vistor pattern wil
 ## 5. ShoppingCartVisitorExample
 It shows the implementation when classes that are supposed to implement 'Accept' have 'ProductBase' class that is used.
 
-Cons:
+**Cons:**
 - Using 'ProductBase' abstract class in ShoppingCart makes you implement 'Accept' visitor for abstract class
 - YOu still have to implement 'Accept' for every subclass like 'Drink', 'Fruit', 'Meat' so that 'this' used in 'Accept' does not point to 'ProductBase'
 - Using Visitor in ProductBase forces me to implement Visitor for ProductBase, which I might not want
 
-Using interfaces instead of abstract classes seems to give more flexibility. 
+**Using interfaces instead of abstract classes seems to give more flexibility. **
 
