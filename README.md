@@ -80,7 +80,7 @@ In order to start developing, please create your own branch:
 - Type: (feature | fix | docs | refactor | test)
 - Name: patternName-languageName
 
-ex. refactor: visitor-csharp
+ex. refactor/visitor-csharp
 
 ## Commits
 
@@ -95,12 +95,12 @@ ex. fix: add missing dependcy
 ## Pull request
 
 Please use following pull request name convention:
-`<Type>: commit name`
+`<type>: commit name`
 
 - Type: feature | fix | docs | refactor | test
 - Name: lowercase
 
-ex. Feature: add visitor pattern
+ex. feature: add visitor pattern
 <br>
 Additionally list in pull request description main changes.
 
