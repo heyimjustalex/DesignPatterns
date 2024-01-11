@@ -101,8 +101,9 @@ Please use following pull request name convention:
 - Name: lowercase
 
 ex. feature: add visitor pattern
-<br>
-Additionally list in pull request description main changes.
+<br><br>
+
+Additionally in pull request please list description of the main changes.
 
 ### Merging
 
