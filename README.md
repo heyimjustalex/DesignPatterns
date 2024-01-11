@@ -69,9 +69,48 @@ Clone the repository: <br/><br/>
 Explore the directories based on the design pattern and language of your choice.<br/>
    Dive into detailed explanations, diagrams, and executable examples.<br/>
 
+
+# Git workflow
+
+## Branches
+
+In order to start developing, please create your own branch:
+`git checkout -b "<type>/<branch-name>"`
+
+- Type: <patternName-language-(feature | fix | docs | refactor | test) >
+- Name: dash-case
+
+ex. visitor-csharp-refactor
+
+## Commits
+
+Please use following commits name convention:
+`<type>: commit name`
+
+- Type: feature | fix | docs | refactor | test
+- Name: lowercase
+
+ex. Fix: add missing dependcy
+
+## Pull request
+
+Please use following pull request name convention:
+`<Type>: commit name`
+
+- Type: feature | fix | docs | refactor | test
+- Name: lowercase
+
+ex. Feature: add visitor pattern
+<br>
+Additionally list in pull request description main changes.
+
+### Merging
+
+⚠ Use squash and merge ⚠
+
 # 🤝 How to contribute?
 
-0. Create a new branch with pattern name and language use -> Vistor-CSharp
+0. Create a new branch with pattern name and language use (lowercase with dash '-' sign) -> vistor-csharp
 1. Create a folder for pattern -> /Visitor<br/>
 2. Create a README.md inside the pattern folder -> /Visitor/README.md<br/>
 3. Create a language folder inside the pattern folder -> /Visitor/CSharp<br/>
