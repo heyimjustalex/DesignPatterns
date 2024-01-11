@@ -77,10 +77,10 @@ Explore the directories based on the design pattern and language of your choice.
 In order to start developing, please create your own branch:
 `git checkout -b "<type>/<branch-name>"`
 
-- Type: <patternName-language-(feature | fix | docs | refactor | test) >
-- Name: dash-case
+- Type: (feature | fix | docs | refactor | test)
+- Name: patternName-languageName
 
-ex. visitor-csharp-refactor
+ex. refactor: visitor-csharp
 
 ## Commits
 
@@ -90,7 +90,7 @@ Please use following commits name convention:
 - Type: feature | fix | docs | refactor | test
 - Name: lowercase
 
-ex. Fix: add missing dependcy
+ex. fix: add missing dependcy
 
 ## Pull request
 
